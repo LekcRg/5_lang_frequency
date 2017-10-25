@@ -1,8 +1,5 @@
 
 .gitignore
-.idea/5_lang_frequency.iml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea
 text.txt
+Harry Potter Order of the Pheonix.txt
