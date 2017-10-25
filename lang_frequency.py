@@ -1,6 +1,7 @@
 import argparse
 from string import punctuation
 
+
 def load_data(path_to_file):
     with open(path_to_file, 'r', encoding='utf-8') as file:
         return file.read()
