@@ -1,6 +1,18 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+Program find the 10 most frequency words in text and displays them in the descending order.
+
+# Quickstart
+
+Example of script launch on Linux, Python 3.5:
+
+```bash
+python lang_frequency.py <path to file> # possibly requires call of python3
+Most frequent words:
+the, to, and, of, a, said, he, was, his, in
+```
+
+Running on Windows is similar.
 
 # Project Goals
 
