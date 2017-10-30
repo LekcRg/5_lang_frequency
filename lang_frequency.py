@@ -20,7 +20,9 @@ def get_clean_words(txt_data):
 def get_most_frequent_words(text):
     words = get_clean_words(text)
     most_frequent_words = []
-    for most_frequent_word in Counter(words).most_common(10):
+    number_frequent_words = 10
+    for most_frequent_word in Counter(words)\
+            .most_common(number_frequent_words):
         most_frequent_words.append(most_frequent_word[0])
     return most_frequent_words
 
