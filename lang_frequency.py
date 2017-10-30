@@ -1,4 +1,5 @@
 import argparse
+from collections import Counter
 from string import punctuation
 
 
@@ -25,10 +26,8 @@ def get_clean_words(txt_data):
 def get_most_frequent_words(text):
     words = get_clean_words(text)
     most_frequent_words = []
-    for frequent_word in range(10):
-        most_frequent_word = max(words, key=lambda word: words.count(word))
-        most_frequent_words.append(most_frequent_word)
-        remove_word_from_array(words, most_frequent_word)
+    for most_frequent_word in Counter(words).most_common(10):
+        most_frequent_words.append(most_frequent_word[0])
     return most_frequent_words
 
 
