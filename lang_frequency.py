@@ -8,18 +8,12 @@ def load_data(path_to_file):
         return file.read()
 
 
-def remove_word_from_array(array, word):
-    for count in range(array.count(word)):
-        array.remove(word)
-
-
 def get_clean_words(txt_data):
     text = txt_data
     all_punctuation = punctuation + "–«»…\n"
     for symbol in range(len(all_punctuation)):
         text = text.replace(all_punctuation[symbol], "")
     words = text.lower().split(" ")
-    remove_word_from_array(words, "")
     return words
 
 
