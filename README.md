@@ -1,15 +1,24 @@
 # Frequency Analysis of Words
 
-Program find the 10 most frequency words in text and displays them in the descending order.
+Program find the 10 most frequency words in text and displays them in the descending order.(Work only with Russian and English language)
 
 # Quickstart
 
 Example of script launch on Linux, Python 3.5:
 
 ```bash
-python lang_frequency.py <path to file> # possibly requires call of python3
-Most frequent words:
-the, to, and, of, a, said, he, was, his, in
+python lang_frequency.py Robin_Hood-Sally_M_Stockton.txt 
+Most frequent words in Robin_Hood-Sally_M_Stockton.txt:
+1. The (occurs 211 times)
+2. And (occurs 114 times)
+3. To (occurs 97 times)
+4. Robin (occurs 86 times)
+5. A (occurs 65 times)
+6. Was (occurs 64 times)
+7. Of (occurs 61 times)
+8. He (occurs 54 times)
+9. You (occurs 54 times)
+10. I (occurs 54 times)
 ```
 
 Running on Windows is similar.
