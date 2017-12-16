@@ -1,6 +1,5 @@
 import argparse
 from collections import Counter
-from string import punctuation
 
 
 def load_data(path_to_file):
@@ -9,22 +8,22 @@ def load_data(path_to_file):
 
 
 def get_clean_words(txt_data):
-    text = txt_data
-    all_punctuation = punctuation + "–«»…\n"
-    for symbol in range(len(all_punctuation)):
-        text = text.replace(all_punctuation[symbol], "")
-    words = text.lower().split(" ")
+    clean_text = ""
+    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" \
+              "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" \
+              "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ "
+    for symbol in txt_data:
+        for letter in letters:
+            if letter == symbol:
+                clean_text += letter
+    words = clean_text.lower().split()
     return words
 
 
 def get_most_frequent_words(text):
     words = get_clean_words(text)
-    most_frequent_words = []
     number_frequent_words = 10
-    for most_frequent_word in Counter(words)\
-            .most_common(number_frequent_words):
-        most_frequent_words.append(most_frequent_word[0])
-    return most_frequent_words
+    return Counter(words).most_common(number_frequent_words)
 
 
 def add_parser():
@@ -35,5 +34,10 @@ def add_parser():
 
 if __name__ == '__main__':
     args = add_parser()
-    print("Most frequent words:\n{}"
-          .format(", ".join(get_most_frequent_words(load_data(args.data)))))
+    counter = 1
+    frequent_words = get_most_frequent_words(load_data(args.data))
+    print("Most frequent words in {}:".format(args.data))
+    for word in frequent_words:
+        print("{number}. {word} (occurs {count} times)"
+              .format(number=counter, word=word[0].title(), count=word[1]))
+        counter += 1
