@@ -7,7 +7,8 @@ Program find the 10 most frequency words in text and displays them in the descen
 Example of script launch on Linux, Python 3.5:
 
 ```bash
-python lang_frequency.py Robin_Hood-Sally_M_Stockton.txt 
+$python lang_frequency.py Robin_Hood-Sally_M_Stockton.txt
+
 Most frequent words in Robin_Hood-Sally_M_Stockton.txt:
 1. The (occurs 211 times)
 2. And (occurs 114 times)
