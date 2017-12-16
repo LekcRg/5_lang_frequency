@@ -1,6 +1,6 @@
 # Frequency Analysis of Words
 
-Program find the 10 most frequency words in text and displays them in the descending order.(Work only with Russian and English language)
+Program find the 10 most frequency words in text and displays them in the descending order.(Work only with Russian and English languages)
 
 # Quickstart
 
